@@ -4,8 +4,6 @@ from selenium.common.exceptions import NoSuchElementException
 
 def web_element(d, name, elements=False, class_name=False, tag_name=False, xpath=False, send_keys=False, attribute="",
                 index=-2):
-    if not class_name and not tag_name and not xpath:
-        print("Idiot")
 
     fun_name = f"find_element_by_"
     if elements:

@@ -161,7 +161,6 @@ def interact_with_list(driver, people, amount, percentage,
     peoples = list(set(peoples))
     for human in [h.replace("\n", "") for h in peoples]:
         followed_actual = info.followed_on_session()
-        print(followed_actual)
         sleep(1)
         if "www.instagram" in human:
             driver.get(human.replace("Verified", ""))
