@@ -87,6 +87,8 @@ class Bot:
             if self.follow:
                 followed_on_session = info.followed_actual
                 while followed_on_session < this_hashtag_to_follow_people:
+                    link = "https://www.instagram.com/explore/tags/" + tag
+                    self.driver.get(link)
                     like_posts(self.driver, amount, self.interact, self.like_interact_amount, self.interact_percent,
                                self.follow, self.follow_crit, this_hashtag_to_follow_people, like_by_hashtag=True,
                                tag=tag)
