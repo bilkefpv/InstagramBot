@@ -126,7 +126,7 @@ def extract_follower_following_info(d):
         following = web_element(d, "g47SY", elements=True, class_name=True)[2].text
         following = int(following.replace(",", ""))
         return following, followers
-    except ValueError:
+    except ValueError or IndexError:
         return 0, 0
 
 
@@ -167,7 +167,8 @@ def interact_with_list(driver, people, amount, percentage,
         else:
             driver.get(f"http://www.instagram.com/{human}")
         if follow and followed_actual <= follow_amount:
-            follow_util(driver, follow_crit)
+            if follow_util(driver, follow_crit) == 0:
+                continue
             followed_actual_after_visit = info.followed_on_session()
             if followed_actual_after_visit == followed_actual:
                 continue
