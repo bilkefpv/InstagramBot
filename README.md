@@ -1,9 +1,8 @@
 # Instagram Bot
-Hey! I've written this automation tool for Instagram for fun and practice.
+Hey! 
 
 If you are searching for a good automation tool for Instagram take a look at [InstaPy](https://github.com/timgrossmann/InstaPy).  
 This tool is inspired by InstaPy, but is not a fork of InstaPy.  
-All of the code written here is mine.
 
 The easiest way to start the bot after downloading requierments is to  
 Replace "username" and "password" with your credentials in `Bot("username", "password") as bot:` in [example_script.py](example_script.py)  
